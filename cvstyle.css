@@ -1,0 +1,320 @@
+/* Global style defaults */
+
+
+* {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/*-- Disable load animation if testing --*/
+
+body.preload * {
+    animation-duration: 0s !important;
+    -webkit-animation-duration: 0s !important;
+    transition: background-color 0s, opacity 0s, color 0s, width 0s, height 0s, padding 0s, margin 0s !important;
+}
+
+/* Standard element style changes */
+
+li {
+    font-size: small;
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+h1 {
+    font-size: medium;
+}
+
+p {
+    margin: 0px;
+}
+
+i {
+    color: #396ee1;
+}
+
+
+.bg-img-1 {
+    background-image: url(../Missions/images/ThePlan-Mission-1.jpg);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+    /* transition: background-image 2s; */
+
+/*-- Disable load animation if testing post load site - 
+Using this comment until I can do it programatically using .preload? 
+    animation-name: bgimages;
+    animation-duration: 20s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+
+    --*/
+}
+
+/*--
+.bg-img-1:hover {
+    transition-delay: 0s;
+    background-image: url(../files/images/15828495895501024_2.jpg);
+
+}
+
+.bg-img-1:after {
+    transition-delay: 0s;
+    background-image: none;
+}
+
+.bg-img-2 {
+    background-image: url(../files/images/15828495895501024_2.jpg);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    transition: background-image 2s;
+
+}
+
+.bg-img-2.toggle {
+    background-image: none;
+}
+
+--*/
+
+
+.thedisplaybox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: Helvetica;
+    /* Fix to most popular desktop screen */
+    height: auto;
+    width: 1080px;
+    margin: auto;
+
+    visibility: hidden;
+
+    /* Not working? 
+    animation-name: startmeup;
+    animation-duration: 40s;
+    animation-fill-mode: forwards;
+
+    transition: visibility 2s;
+    */
+}
+
+
+.thedisplaybox:hover {
+    visibility: visible;
+}
+
+/* Full screen sidebar container */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    justify-content: space-between;
+    flex-direction: column;
+    font-family: Helvetica;
+    width: 25%;
+    height: auto;
+    text-align: right;
+    border-style: solid;
+    border-width: 3px;
+    border-color: transparent;
+    border-right-color: #2d55aa;
+}
+
+
+/* Content Page container */
+.home {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+    padding-right: 1%;
+    padding-left: 1%;
+
+}
+
+
+
+/* Button style */
+.button {
+    background-color: #d8e4ef;
+    margin: 2px 5px;
+    padding: 8px 15px;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #396ee1;
+    color: white;
+}
+
+
+.chatbutton {
+    background-color: #d8e4ef;
+    color: black;
+    margin: 20px 0px;
+    padding: 14px 25px;
+    width: 150px;
+    text-align: center;
+}
+
+.chatbutton:hover {
+    background-color: #396ee1;
+    color: white;
+}
+
+/* Id selects - Inline and common styles  */
+
+
+#pic {
+    width: 65%;
+    height: 300px;
+    margin: 0px 100px;
+    /* For adding images the CSS way */
+    background-image: url("https://flipweb.org/wp-content/uploads/2019/11/Facebook-Pay.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    /* For adding images the CSS way */
+}
+
+#highlight {
+    background-color: #3869d1;
+    color: rgb(181, 213, 250);
+    margin: 0px;
+    border: #3869d1;
+    padding: 6px;
+    font-size: medium;
+}
+
+#contacts {
+    font-size: small;
+    color: black;
+    font-family: Tahoma;
+    padding: 5px;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+    .thedisplaybox {
+        flex-direction: column;
+        width: auto;
+        height: auto;
+
+    }
+
+    .sidebar {
+        flex-direction: row;
+        justify-content: right;
+        position: fixed;
+        width: min-content;
+        height: min-content;
+        border-color: transparent;
+        background-color: aliceblue;
+        top: 1%;
+        right: 1%;
+
+    }
+
+}
+
+
+
+/* -- Animation openning page --*/
+@keyframes startmeup {
+    from {
+        display: none;
+    }
+
+    to {
+        display: block;
+    }
+}
+
+@keyframes bgimages {
+
+    100% {
+        background-image: url(../Missions/images/clickIt.jpg);
+        width: 100%;
+     }
+
+    99% {
+        background-image: url(../Missions/images/clickIt.jpg);
+        width: 90%;
+    }
+
+    98% {
+        background-image: url(../Missions/images/clickIt.jpg);
+        width: 100%;
+    }
+
+    97% {
+        background-image: url(../Missions/images/clickIt.jpg);
+        width: 90%;
+    }
+
+    94% {
+        background-image: url(../Missions/images/clickIt.jpg);
+        width: 100%;
+    }
+
+   
+
+    87% {
+        background-image: url(../Missions/images/clickIt.jpg);
+        width: 100%;
+    }
+
+    86% {
+        background-image: url(../Missions/images/clickIt.jpg);
+        width: 90%;
+    }
+
+    85% {
+        background-image: url(../Missions/images/clickIt.jpg);
+        width: 100%;
+    }
+
+    80% {
+        background-image: url(../Missions/images/clickIt.jpg);
+        width: 90%;
+    }
+
+    50% {
+        background-image: url(../Missions/images/15828495895501024_2.jpg);
+
+    }
+
+    25% {
+        background-image: url(../Missions/images/15828495895501024_1.jpg);
+
+    }
+
+    0% {
+        background-image: none;
+    }
+
+
+}
+
+/*-- Animation click it ---*/
+@keyframes clickit {
+    100% {
+        background-image: url(../Missions/images/clickIt.jpg);
+        width: 100%;
+    }
+
+    70% {
+        background-image: url(../Missions/images/clickIt.jpg);
+        width: 90%;
+    }
+}

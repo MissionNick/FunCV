@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nick Wilson Cirriculum Vitae</title>
+    <link rel='stylesheet' href="cvstyle.css">
+    <link rel='stylesheet' href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>function hidetoggle() {
+            var x = document.getElementById(arguments[0]);
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        } </script>
+    <script>function toggleVisible() {
+            var x = document.getElementById(arguments[0]);
+
+            /* document.body.style.backgroundImage = "none";   NOT WORKING!*/
+
+            /* event.preventDefault();
+            document.getElementById("bg-img-1").style.background = "none";  also not working!*/
+
+            document.getElementById("bg-img-1").removeAttribute("class"); /* Third time lucky!!!! */
+
+            if (x.style.visibility === "visible") {
+                /*-- x.style.visibility = "hidden";--*/
+
+            } else {
+                x.style.visibility = "visible";
+            }
+        } </script>
+
+
+</head>
+
+
+<body>
+
+    <!-- Script test 
+    <button onclick="hidetoggle('Hide')">Element Hide toggle</button>
+    <button onclick="toggleVisible('Hide')">Visible Toggle</button>
+    -->
+
+    <!-- Layout for container - media based -->
+    <div class="bg-img-1" id="bg-img-1" onclick="toggleVisible('Hide')">
+        <div class="thedisplaybox" id="Hide">
+            <!-- Sidebar Contacts and Links start -->
+            <div class="sidebar">
+                <div id="highlight">Curriculum Vitae</div>
+
+                <div id="contacts">
+                    <p>Nick Wilson</p>
+                    <br>
+                    <p>4 Katene Place</p>
+                    <p>Snells Beach</p>
+                    <p>Auckland 950</p>
+                    <p>New Zealand</p>
+                    <br>
+                    <a href="tel:+64276214595">(m)+64 27 6214595</a>
+                    <br>
+                    <a href="mailto:the.ardreagh@gmail.com">(e)the.ardreagh@gmail.com</a>
+                    <br>
+                    <!-- social media links in a row -->
+                    <div style="display: flex;flex-direction: row;justify-self: flex-end;">
+                        <a href="https://www.linkedin.com/in/nick-wilson-8aba22a/" target="_blank">
+                            <i class="fa fa-linkedin-square fa" aria-hidden="true"></i>
+                        </a>
+                        <a href="" target="_blank">
+                            <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Sidebar Contacts and Links end -->
+
+            <!-- CV content start-->
+            <div class="home">
+                <div>
+                    <h1 style="font-size:xx-large ;">Nick Wilson</h1>
+                    <h1>Full Stack Developer in training</h1>
+                </div>
+                <div>
+                    <h2>EXPERIENCE SUMMARY</h2>
+                    <h3>Skills and experience acquired over a 25 year career in Information and Technology</h3>
+                    <li>Agile product owner and product management</li>
+                    <li>Program Management; Driving organisational business value through feature release and product
+                        life
+                        cycle management</li>
+                    <li>Project Management; Technical and Business change initiatives, Risk management and benefit and
+                        strategic value driven.</li>
+                    <li>Business and System Analysis; Requirements engineering, Use case driven and architecture
+                        centric.
+                    </li>
+                    <li>Organisational Change Management, Business process re-engineering.</li>
+                    <li>Information Technology Industry standards and methodology experience.</li>
+                    <li>Systems integration experience for large multinational organisations.</li>
+                    <li>An interface between the business and technical stakeholders defining and promoting solution
+                        architecture (Aligning IT and Business).</li>
+                    <li>Workshop facilitator to analyse and define requirements and solution design.</li>
+                    <li>Complete software development lifecycle (SDLC) experience producing precise and
+                        detailed analysis and documentation for business and technical audiences.</li>
+                    <li>Consultancy and large corporate environment experience.</li>
+                </div>
+
+
+                <div>
+                    <h2>RECENT POSITIONS</h2>
+                    <h3>April 2012— Present</h3>
+
+                    <p>HealthLink Program Manager / Product Owner</p>
+                    <p>Role:Ensuring customer and product development projects are in line with the product road map.
+                        Manage
+                        the
+                        product program of work through company projects.</p>
+                    <li>Support the organizational transition to Agile and Lean principles and practices developing PMO
+                        and
+                        Agile Product Management</li>
+                    <li>HealthLink integration product development management covering a services footprint of 15,000
+                        health
+                        provider organisations and annual 65 million clinical data exchanges across New Zealand and
+                        Australia.
+                    </li>
+
+                    <br>
+                    <h3>December 2010—March 2012</h3>
+                    <p>IT Contract Project Manager</p>
+                    <p>HealthLink Project Manager 18 Months</p>
+                    <p>Role: Provided project management services delivering Australia National eHealth Secure Messaging
+                        Delivery </p>
+                    <li>Successfully managed a project to deliver a interoperable messaging services conformant to
+                        Australian
+                        National eHealth secure message delivery standards. $600k, 12 months execution</li>
+                    <!-- Page 1 ends-->
+                    <!-- to be continued with a animation scroll -->
+                    <!-- 
+            <br>
+            <p>2Degrees Project Manager 6 Months</p>
+            <p>HealthLink Project Manager 18 Months</p>
+            <p>Role: Provided project management services delivering core systems changes</p>
+            <li>Successfully managed a project to deliver a new platform to launch the companies business services
+                offerings including business process core systems changes with multiple offshore systems providers.
+                $500k, 6 months execution</li>
+
+            -->
+                </div>
+
+            </div>
+            <!-- CV content end-->
+        </div>
+    </div>
+</body>
+
+</html>
