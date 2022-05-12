@@ -13,6 +13,8 @@ To avoid the load annimation (until I can add programatically)
 * {
     box-sizing: border-box;
     width: 100%;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    /*font-family: Helvetica;*/
 }
 
 
@@ -41,6 +43,10 @@ p {
 
 i {
     color: #396ee1;
+}
+
+label {
+    white-space:nowrap;
 }
 
 /*-- Disable load animation if testing post load site - 
@@ -96,7 +102,6 @@ Using this comment until I can do it programatically using .preload?
     display: flex;
     flex-direction: row;
     justify-content: center;
-    font-family: Helvetica;
     /* Fix to most popular desktop screen */
     height: auto;
     width: 1080px;
@@ -125,7 +130,6 @@ Using this comment until I can do it programatically using .preload?
     justify-content: left;
     justify-content: space-between;
     flex-direction: column;
-    font-family: Helvetica;
     width: 25%;
     height: auto;
     text-align: right;
@@ -149,18 +153,19 @@ Using this comment until I can do it programatically using .preload?
 
 /* contactform form */
 .contactform {
-    position: fixed;
-    top: 10%;
-    left: 1%;
-    width: 25%;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position:fixed;
+    bottom: 10%;
+    left: 10%; 
+    width: max-content;
     height: min-content;
-    flex-direction: row;
-    justify-content: right;
     border-color: transparent;
     background-color: aliceblue;
     border-style: solid;
-    font-family: Helvetica;
-    
+    visibility: hidden;
+         
 }
 
 
@@ -197,18 +202,6 @@ Using this comment until I can do it programatically using .preload?
 /* Id selects - Inline and common styles  */
 
 
-#pic {
-    width: 65%;
-    height: 300px;
-    margin: 0px 100px;
-    /* For adding images the CSS way */
-    background-image: url("https://flipweb.org/wp-content/uploads/2019/11/Facebook-Pay.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
-    /* For adding images the CSS way */
-}
-
 #highlight {
     background-color: #3869d1;
     color: rgb(181, 213, 250);
@@ -221,7 +214,6 @@ Using this comment until I can do it programatically using .preload?
 #contacts {
     font-size: small;
     color: black;
-    font-family: Tahoma;
     padding: 5px;
 }
 
@@ -252,17 +244,6 @@ Using this comment until I can do it programatically using .preload?
 }
 
 
-
-/* -- Animation openning page --*/
-@keyframes startmeup {
-    from {
-        display: none;
-    }
-
-    to {
-        display: block;
-    }
-}
 
 @keyframes bgimages {
 

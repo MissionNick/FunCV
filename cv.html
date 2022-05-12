@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nick Wilson Cirriculum Vitae</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+
     <link rel='stylesheet' href="cvstyle.css">
     <link rel='stylesheet' href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -18,6 +23,12 @@
                 x.style.display = "none";
             }
         } </script>
+
+    <script>function closeContactform() {
+            var x = document.getElementById('contactform');
+            x.style.visibility = "hidden";
+
+        } </script>
     <script>function toggleVisible() {
             var x = document.getElementById(arguments[0]);
 
@@ -29,7 +40,7 @@
             document.getElementById("bg-img-1").removeAttribute("class"); /* Third time lucky!!!! */
 
             if (x.style.visibility === "visible") {
-                /*-- x.style.visibility = "hidden";--*/
+                x.style.visibility = "hidden";
 
             } else {
                 x.style.visibility = "visible";
@@ -37,12 +48,14 @@
         } </script>
 
 
+
+
 </head>
 
 
 <body>
 
-    <!-- Script test 
+        <!-- Script test 
     <button onclick="hidetoggle('Hide')">Element Hide toggle</button>
     <button onclick="toggleVisible('Hide')">Visible Toggle</button>
     -->
@@ -72,7 +85,7 @@
                             <i class="fa fa-linkedin-square fa" aria-hidden="true"></i>
                         </a>
                         <a href="" target="_blank">
-                            <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                            <i onclick="toggleVisible('contactform')" class="fa fa-commenting-o" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
@@ -154,31 +167,40 @@
             <!-- CV content end-->
 
             <!-- Contact form -->
-            <div class="contactform">
+            <div class="contactform" id="contactform">
+                <div id="highlight">Message me</div>
                 <form action="url" method="POST" id="submessage">
-                    <label>Name:</label><input type="text" name="full-name" placeholder="Your full name" required
-                        width="30px">
+
+                    <label style="white-space:nowrap">Name <input type="text" name="full-name"
+                            placeholder="Your full name" required style="width:auto;"></label>
+                    <label style="white-space:nowrap;">Email <input type="email" name="email" placeholder="email@domain"
+                            required style="width:fit-content;"></label>
+
+                    <!-- Can't get the preferred contacts to fit and align
+                        
+                        <div id="contacts" style="white-space:nowrap;">
+
+                        <table>
+                            <tbody>
+                                <tr>Preferred contact</tr>
+                                <tr>
+                                    <td>Email<input type="radio" id="email" name="subject" value="email"></td>
+                                    <td>Phone<input type="radio" id="phone" name="subject" value="phone"></td>
+                                    <td>Other<input type="radio" id="other" name="subject" value="other"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div> -->
                     <br>
-                    <label>Email:</label><input type="email" name="email" placeholder="email@domain" required
-                        width="30px">
-                    <br>
-                    <legend>Preferred contact
-                        <input type="radio" id="email" name="subject" value="email">
-                        <label>Email</label>
-                        <input type="radio" id="phone" name="subject" value="phone">
-                        <label>Phone</label>
-                        <input type="radio" id="other" name="subject" value="other">
-                        <label>Other</label>
-                    </legend>
-                    <br>
-                    <textarea rows="5" cols="40" name="message" form="submessage"
+                    <textarea rows="5" cols="50" name="message" form="submessage"
                         placeholder="What is your message"></textarea>
                     <br>
-                    <input type="submit" value="Submit">
+                    <input type="submit" value="Submit" onclick="closeContactform();">
                 </form>
 
             </div>
-            <!-contact form end-->
+            <!-- Contact end-->
         </div>
         <!-- displaybox end-->
     </div>
