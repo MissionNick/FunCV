@@ -67,7 +67,7 @@
                     <a href="mailto:the.ardreagh@gmail.com">(e)the.ardreagh@gmail.com</a>
                     <br>
                     <!-- social media links in a row -->
-                    <div style="display: flex;flex-direction: row;justify-self: flex-end;">
+                    <div style="display: flex;flex-direction: row;;">
                         <a href="https://www.linkedin.com/in/nick-wilson-8aba22a/" target="_blank">
                             <i class="fa fa-linkedin-square fa" aria-hidden="true"></i>
                         </a>
@@ -150,10 +150,37 @@
 
             -->
                 </div>
-
             </div>
             <!-- CV content end-->
+
+            <!-- Contact form -->
+            <div class="contactform">
+                <form action="url" method="POST" id="submessage">
+                    <label>Name:</label><input type="text" name="full-name" placeholder="Your full name" required
+                        width="30px">
+                    <br>
+                    <label>Email:</label><input type="email" name="email" placeholder="email@domain" required
+                        width="30px">
+                    <br>
+                    <legend>Preferred contact
+                        <input type="radio" id="email" name="subject" value="email">
+                        <label>Email</label>
+                        <input type="radio" id="phone" name="subject" value="phone">
+                        <label>Phone</label>
+                        <input type="radio" id="other" name="subject" value="other">
+                        <label>Other</label>
+                    </legend>
+                    <br>
+                    <textarea rows="5" cols="40" name="message" form="submessage"
+                        placeholder="What is your message"></textarea>
+                    <br>
+                    <input type="submit" value="Submit">
+                </form>
+
+            </div>
+            <!-contact form end-->
         </div>
+        <!-- displaybox end-->
     </div>
 </body>
 

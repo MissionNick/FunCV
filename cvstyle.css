@@ -1,3 +1,12 @@
+/*-- Testing Information
+
+To avoid the load annimation (until I can add programatically)
+
+- Comment out .bmg-img-1 class
+- Comment out  visibility:hidden; of the .thedisplaybox class
+
+--*/
+
 /* Global style defaults */
 
 
@@ -6,13 +15,8 @@
     width: 100%;
 }
 
-/*-- Disable load animation if testing --*/
 
-body.preload * {
-    animation-duration: 0s !important;
-    -webkit-animation-duration: 0s !important;
-    transition: background-color 0s, opacity 0s, color 0s, width 0s, height 0s, padding 0s, margin 0s !important;
-}
+
 
 /* Standard element style changes */
 
@@ -39,6 +43,8 @@ i {
     color: #396ee1;
 }
 
+/*-- Disable load animation if testing post load site - 
+Using this comment until I can do it programatically using .preload? 
 
 .bg-img-1 {
     background-image: url(../Missions/images/ThePlan-Mission-1.jpg);
@@ -46,19 +52,20 @@ i {
     background-color: transparent;
     background-size: contain;
     background-position: center;
-    /* transition: background-image 2s; */
+    /* transition: background-image 2s;...*/
 
-/*-- Disable load animation if testing post load site - 
-Using this comment until I can do it programatically using .preload? 
+/* -- test disable 
     animation-name: bgimages;
     animation-duration: 20s;
     animation-delay: 5s;
     animation-fill-mode: forwards;
 
-    --*/
-}
+    
+} 
 
-/*--
+--*/
+
+/*-- Not used just working code
 .bg-img-1:hover {
     transition-delay: 0s;
     background-image: url(../files/images/15828495895501024_2.jpg);
@@ -94,8 +101,8 @@ Using this comment until I can do it programatically using .preload?
     height: auto;
     width: 1080px;
     margin: auto;
-
-    visibility: hidden;
+    /*-- Removed for testing 
+    visibility: hidden;  --*/
 
     /* Not working? 
     animation-name: startmeup;
@@ -139,6 +146,23 @@ Using this comment until I can do it programatically using .preload?
     padding-left: 1%;
 
 }
+
+/* contactform form */
+.contactform {
+    position: fixed;
+    top: 10%;
+    left: 1%;
+    width: 25%;
+    height: min-content;
+    flex-direction: row;
+    justify-content: right;
+    border-color: transparent;
+    background-color: aliceblue;
+    border-style: solid;
+    font-family: Helvetica;
+    
+}
+
 
 
 
@@ -245,7 +269,7 @@ Using this comment until I can do it programatically using .preload?
     100% {
         background-image: url(../Missions/images/clickIt.jpg);
         width: 100%;
-     }
+    }
 
     99% {
         background-image: url(../Missions/images/clickIt.jpg);
@@ -267,7 +291,7 @@ Using this comment until I can do it programatically using .preload?
         width: 100%;
     }
 
-   
+
 
     87% {
         background-image: url(../Missions/images/clickIt.jpg);
