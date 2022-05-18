@@ -12,7 +12,6 @@ To avoid the load annimation (until I can add programatically)
 
 * {
     box-sizing: border-box;
-    width: 100%;
     font-family: 'ZCOOL QingKe HuangYou', cursive;
     /*font-family: Helvetica;*/
 }
@@ -34,7 +33,9 @@ a {
 
 
 h1 {
+
     font-size: medium;
+
 }
 
 p {
@@ -46,56 +47,31 @@ i {
 }
 
 label {
-    white-space:nowrap;
+    white-space: nowrap;
 }
+
 
 /*-- Disable load animation if testing post load site - 
-Using this comment until I can do it programatically using .preload? 
+Using this comment until I can do it programatically using .preload? */
 
-.bg-img-1 {
-    background-image: url(../Missions/images/ThePlan-Mission-1.jpg);
+.bg-img-launch {
+    background-image: url();
     background-repeat: no-repeat;
     background-color: transparent;
-    background-size: contain;
     background-position: center;
-    /* transition: background-image 2s;...*/
-
-/* -- test disable 
-    animation-name: bgimages;
+    background-size: contain;
+    animation-name: bglaunchimages;
     animation-duration: 20s;
-    animation-delay: 5s;
-    animation-fill-mode: forwards;
-
-    
-} 
-
---*/
-
-/*-- Not used just working code
-.bg-img-1:hover {
-    transition-delay: 0s;
-    background-image: url(../files/images/15828495895501024_2.jpg);
-
+    animation-delay: 0s;
+    animation-fill-mode: none;
 }
 
-.bg-img-1:after {
-    transition-delay: 0s;
-    background-image: none;
+.clickIt {
+    visibility: visible;
+    position: fixed;
+    right: 0%;
+    top: 0%
 }
-
-.bg-img-2 {
-    background-image: url(../files/images/15828495895501024_2.jpg);
-    background-repeat: no-repeat;
-    background-color: transparent;
-    transition: background-image 2s;
-
-}
-
-.bg-img-2.toggle {
-    background-image: none;
-}
-
---*/
 
 
 .thedisplaybox {
@@ -103,11 +79,12 @@ Using this comment until I can do it programatically using .preload?
     flex-direction: row;
     justify-content: center;
     /* Fix to most popular desktop screen */
-    height: auto;
-    width: 1080px;
+    height: 680px;
+    width: auto;
     margin: auto;
-    /*-- Removed for testing 
-    visibility: hidden;  --*/
+    /*-- Removed for testing */
+    visibility: hidden;
+    overflow: hidden;
 
     /* Not working? 
     animation-name: startmeup;
@@ -118,10 +95,6 @@ Using this comment until I can do it programatically using .preload?
     */
 }
 
-
-.thedisplaybox:hover {
-    visibility: visible;
-}
 
 /* Full screen sidebar container */
 .sidebar {
@@ -137,6 +110,7 @@ Using this comment until I can do it programatically using .preload?
     border-width: 3px;
     border-color: transparent;
     border-right-color: #2d55aa;
+    overflow: hidden;
 }
 
 
@@ -145,27 +119,33 @@ Using this comment until I can do it programatically using .preload?
     display: flex;
     flex-direction: column;
     width: 80%;
-    height: 100%;
+    height: 680px;
     padding-right: 1%;
     padding-left: 1%;
+    overflow: hidden;
+    transform-origin: 50% 100%;
+    transform: perspective(300px) rotateX(25deg);
+    animation: scroll 100s linear 4s infinite;
 
 }
 
+
+
+
 /* contactform form */
 .contactform {
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    position:fixed;
-    bottom: 10%;
-    left: 10%; 
+    position: fixed;
+    right: 1px;
     width: max-content;
     height: min-content;
     border-color: transparent;
     background-color: aliceblue;
     border-style: solid;
     visibility: hidden;
-         
+
 }
 
 
@@ -224,10 +204,11 @@ Using this comment until I can do it programatically using .preload?
     .thedisplaybox {
         flex-direction: column;
         width: auto;
-        height: auto;
+        overflow: hidden;
 
     }
 
+   
     .sidebar {
         flex-direction: row;
         justify-content: right;
@@ -245,81 +226,35 @@ Using this comment until I can do it programatically using .preload?
 
 
 
-@keyframes bgimages {
+@keyframes bglaunchimages {
+
+
 
     100% {
-        background-image: url(../Missions/images/clickIt.jpg);
-        width: 100%;
-    }
-
-    99% {
-        background-image: url(../Missions/images/clickIt.jpg);
-        width: 90%;
-    }
-
-    98% {
-        background-image: url(../Missions/images/clickIt.jpg);
-        width: 100%;
-    }
-
-    97% {
-        background-image: url(../Missions/images/clickIt.jpg);
-        width: 90%;
-    }
-
-    94% {
-        background-image: url(../Missions/images/clickIt.jpg);
-        width: 100%;
-    }
-
-
-
-    87% {
-        background-image: url(../Missions/images/clickIt.jpg);
-        width: 100%;
-    }
-
-    86% {
-        background-image: url(../Missions/images/clickIt.jpg);
-        width: 90%;
-    }
-
-    85% {
-        background-image: url(../Missions/images/clickIt.jpg);
-        width: 100%;
-    }
-
-    80% {
-        background-image: url(../Missions/images/clickIt.jpg);
-        width: 90%;
-    }
-
-    50% {
-        background-image: url(../Missions/images/15828495895501024_2.jpg);
+        background-image: url(../Missions/images/mspubcv_page2.jpg);
 
     }
 
-    25% {
-        background-image: url(../Missions/images/15828495895501024_1.jpg);
+    60% {
+        background-image: url(../Missions/images/mspubcv_page1.jpg);
 
     }
 
     0% {
-        background-image: none;
+        background-image: url(../Missions/images/ThePlan-Mission-1.jpg);
     }
 
 
 }
 
-/*-- Animation click it ---*/
-@keyframes clickit {
-    100% {
-        background-image: url(../Missions/images/clickIt.jpg);
-        width: 100%;
+
+
+@keyframes scroll {
+    0% {
+        top: 100%;
     }
 
-    70% {
-        background-image: url(../Missions/images/clickIt.jpg);
-        width: 90%;
+    100% {
+        top: -170%;
     }
 }
