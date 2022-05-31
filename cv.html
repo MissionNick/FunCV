@@ -13,239 +13,160 @@
     <link rel='stylesheet' href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel='stylesheet' href="cvstyle.css">
+    <!--<link rel='stylesheet' href="starwars.css"> -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
-    <script src="../Missions/cvscripts.js"></script>
-
-    <script>
-        function scrollTop() {
-            let element = document.getElementById('topPage')
-            element.scrollIntoView({ behavior: 'smooth' });
-        };
-
-    </script>
-
-    <script>
-        function scrollBottom() {
-            let element = document.getElementById('bottom')
-            element.scrollIntoView({ behavior: 'smooth' });
-            // window.setTimeout(function () { scrollTop(); }, 2000);
-        };
-
-    </script>
-
+    <!--<scripts at the bottom of the body for now -->
 </head>
 
 
 <body>
 
-    <!-- Script test 
+
+    <!--  Script test 
+    <button onclick="moveElement('career-history','myCareerDropdown')">scrollSection</button>
+    <button onclick="scrollToSection(education)">scrollSection</button>
+    <button onclick="scrollTop()">scrollTop</button>
     <button onclick="hidetoggle('Hide')">Element Hide toggle</button>
     <button onclick="toggleVisible('Hide')">Visible Toggle</button>
     <button onclick="startup()">Startup</button>
     <button onclick="starWarsScroll()">More</button>
-    -->
-
-
-
-    <!-- Layout for container - media based -->
-
+      
     <button onclick="scrollBottom()">scrollBottom</button>
     <button onclick="scrollTop()">scrollTop</button>
+    <button onclick="startup()">startup</button>
+    -->
 
+    <!-- Welcome to site using background images and animation = Clickit to skip intro-->
     <div class="bg-img-launch" id="bg-img-launch">
+    </div>
 
-        <div class="thedisplaybox" id="thedisplaybox">
-            <!-- Sidebar Contacts and Links start -->
-            <div class="sidebar">
-                <div id="highlight">Curriculum Vitae</div>
 
-                <div id="contacts">
-                    <p>Nick Wilson</p>
-                    <br>
-                    <p>4 Katene Place</p>
-                    <p>Snells Beach</p>
-                    <p>Auckland 950</p>
-                    <p>New Zealand</p>
-                    <br>
-                    <a href="tel:+64276214595">(m)+64 27 6214595</a>
-                    <br>
-                    <a href="mailto:the.ardreagh@gmail.com">(e)the.ardreagh@gmail.com</a>
-                    <br>
-                    <!-- social media links in a row -->
-                    <div style="display: flex;flex-direction: row-reverse;">
-                        <a href="https://www.linkedin.com/in/nick-wilson-8aba22a/" target="_blank"
-                            style="width:min-content;margin:1px;">
-                            <i class="fa fa-linkedin-square fa" aria-hidden="true"></i>
-                        </a>
-                        <i style="width:min-content;margin:1px; cursor: pointer;" onclick="openContactform()"
-                            class="fa fa-commenting-o" aria-hidden="true"></i>
 
-                    </div>
-                </div>
-
+    <div id="topmenu">
+        <i class="fa fa-bars" aria-hidden="true" onclick="menuDisplay(topDropdown)">
+            <div class="dropdown-content" id="topDropdown" onmouseleave="menuClose(topDropdown)">
+                <a href="javascript:window.location.reload(true);">Home</a>
+                <a href="" class="coming-soon">Edit</a>
+                <a href="javascript:sillyLoop();">High score</a>
+                <a href="javascript:rollCredits();">Roll Credits</a>
             </div>
-            <!-- Sidebar Contacts and Links end -->
 
-            <!-- CV content start-->
-            <div class="home">
-                <div>
-                    <h1 style="font-size:xx-large ;">Nick Wilson</h1>
-                    <h1>Full Stack Developer in training</h1>
+        </i>
+    </div>
+
+    <div class="thedisplaybox" id="thedisplaybox">
+
+        <!-- Sidebar Contacts and Links start -->
+        <div class="sidebar">
+            <div class="highlight" style="text-align:left;">
+                <div id="sidemenu">
+                    <i class="fa fa-bars highlight" ; aria-hidden="true" onclick="menuDisplay(sideDropdown)">
+                        <div class="dropdown-content" id="sideDropdown" onmouseleave="menuClose(sideDropdown)">
+                            <a href="javascript:window.location.reload(true);">Home</a>
+                            <a href="#" class="coming-soon">Edit</a>
+                            <a href="javascript:sillyLoop();">High score</a>
+                            <a href="javascript:rollCredits();">Roll Credits</a>
+                        </div>
+                    </i>
                 </div>
-                <div id="titlecontent">
-                    <div id="topPage">
-                        <h2>EXPERIENCE SUMMARY</h2>
-                        <h3>Skills and experience acquired over a 25 year career in Information and Technology</h3>
-                        <li>Agile product owner and product management</li>
-                        <li>Program Management; Driving organisational business value through feature release and
-                            product
-                            life
-                            cycle management</li>
-                        <li>Project Management; Technical and Business change initiatives, Risk management and benefit
-                            and
-                            strategic value driven.</li>
-                        <li>Business and System Analysis; Requirements engineering, Use case driven and architecture
-                            centric.
-                        </li>
-                        <li>Organisational Change Management, Business process re-engineering.</li>
-                        <li>Information Technology Industry standards and methodology experience.</li>
-                        <li>Systems integration experience for large multinational organisations.</li>
-                        <li>An interface between the business and technical stakeholders defining and promoting solution
-                            architecture (Aligning IT and Business).</li>
-                        <li>Workshop facilitator to analyse and define requirements and solution design.</li>
-                        <li>Complete software development lifecycle (SDLC) experience producing precise and
-                            detailed analysis and documentation for business and technical audiences.</li>
-                        <li>Consultancy and large corporate environment experience.</li>
-                    </div>
+                Cirriculum Vitae
+            </div>
+            <div class="careerHistory" id="careerScroll">
+                <section id="career-history">
+                    <h2>Career History</h1>
 
+                        <h3>Clanwilliam Health Asia.
+                            <a class="hyper" href="https://www.clanwilliam.health"
+                                target="_blank">www.clanwilliam.health</a>
+                            <p>Delivery Manager</p>
+                        </h3>
 
-                    <div>
-                        <h2>RECENT POSITIONS</h2>
-                        <h3>April 2012— Present</h3>
-
-                        <p>HealthLink Program Manager / Product Owner</p>
-                        <p>Role:Ensuring customer and product development projects are in line with the product road
-                            map.
-                            Manage
-                            the
-                            product program of work through company projects.</p>
-                        <li>Support the organizational transition to Agile and Lean principles and practices developing
-                            PMO
-                            and
-                            Agile Product Management</li>
-                        <li>HealthLink integration product development management covering a services footprint of
-                            15,000
-                            health
-                            provider organisations and annual 65 million clinical data exchanges across New Zealand and
-                            Australia.
-                        </li>
-
+                        <h3>HealthLink Limited.
+                            <a class="hyper" href="https://www.healthlink.net" target="_blank">www.healthlink.net</a>
+                            <p>Product Manager/Product owner</p>
+                            <p>Program Manager</p>
+                            <p>Project Manager</p>
+                        </h3>
                         <br>
-                        <h3>December 2010—March 2012</h3>
-                        <p>IT Contract Project Manager</p>
-                        <p>HealthLink Project Manager 18 Months</p>
-                        <p>Role: Provided project management services delivering Australia National eHealth Secure
-                            Messaging
-                            Delivery </p>
-                        <li>Successfully managed a project to deliver a interoperable messaging services conformant to
-                            Australian
-                            National eHealth secure message delivery standards. $600k, 12 months execution</li>
-
+                        <h3>2Degrees Mobile New Zealand.
+                            <a class="hyper" href="https://www.2degreesmobile.co.nz"
+                                target="_blank">www.2degreesmobile.co.nz</a>
+                            <p>Senior Project Manager</p>
+                        </h3>
                         <br>
-                        <p>2Degrees Project Manager 6 Months</p>
-                        <p>HealthLink Project Manager 18 Months</p>
-                        <p>Role: Provided project management services delivering core systems changes</p>
-                        <li>Successfully managed a project to deliver a new platform to launch the companies business
-                            services
-                            offerings including business process core systems changes with multiple offshore systems
-                            providers.
-                            $500k, 6 months execution</li>
+                        <h3>TVNZ.
+                            <a class="hyper" href="https://www.tvnz.co.nz" target="_blank">www.tvnz.co.nz</a>
+                            <p>Senior Business Analyst</p>
+                        </h3>
+                        <br>
+                        <h3>Telecom NZ Ltd, Yellow Pages Group.
+                            <a class="hyper" href="www.yellowpages.co.nz" target="_blank">www.yellowpages.co.nz</a>
+                            <p>Project Manager</p>
+                        </h3>
+                        <br>
 
-                    </div>
-
-                    <div id="bottom">
-                        <p class="center">EPISODE IV<br />
-                            A NEW HOPE FOR CSS3</p>
-
-                        <p>It is a period of vendor war.</p>
-
-                        <p>This is a demonstration of Star Wars-style scrolling 3D titles in CSS3. It possibly has no
-                            practical purpose
-                            whatsoever but it looks great and you can impress your friends.</p>
-
-                        <p>Before movie-buffs start ranting, I realize Star Wars wasn't the first to use crawling 3D
-                            titles, but few of you will
-                            remember the Flash Gordon series or the 1936 adaption of HG Wells' "Things to Come".</p>
-
-                        <p>Also, by mentioning "Star Wars", everyone will understand what I mean. And I'll receive
-                            several thousand more visits.
-                        </p>
-
-                        <p>The scrolling titles work well in Chrome, Safari and Firefox. Opera doesn't implement 3D
-                            transforms yet, but the text
-                            will scroll. IE users receive a blank page. A shame, but IE10 should support it.</p>
-
-                        <p>So how does it work? Well, it's fairly simple. We have an outer absolute DIV (#titles) which
-                            is rotated along the
-                            X-axis using perspective to give the impression of depth. The same DIV also has an :after
-                            psuedo-element which
-                            applies a linear gradient so the text appears to fade out.</p>
-
-                        <p>Inside, we have another absolutely-positioned DIV which contains the text (#titlecontent).
-                            The top is set to 100% to
-                            ensure it starts off-screen then uses CSS3 animation to move it upward over time. No
-                            JavaScript is required.</p>
-
-                        <p>You will probably need to adjust the movement amount and timing depending on the quantity of
-                            text you want to show.
-                            The 3D depth can also be tweaked in the #titles declaration.</p>
-
-                        <p>All the code is contained in this single HTML file&hellip;</p>
-
-                        <p class="center">View the source, Luke!</p>
-
-                        <p>Sorry. Couldn't resist it.</p>
-
-                        <p>You're welcome to use this demonstration code in your own sites. Please link back to the
-                            original article at:</p>
-
-                        <p class="center"><a
-                                href="http://www.sitepoint.com/css3-starwars-scrolling-text/">sitepoint.com/<br />css3-starwars-scrolling-text/</a>
-                        </p>
-
-                        <p>and give me a shout on Twitter <a href="https://twitter.com/craigbuckler">@craigbuckler</a>
-                            &ndash; I'd love to see
-                            how you use and abuse it!</p>
+                        <h3>IAG NZ Ltd.
+                            <a class="hyper" href="www.iag.co.nz" target="_blank">www.iag.co.nz</a>
+                            <p>Lead Solutions Analyst</p>
+                            <p>Project Manager</p>
+                        </h3>
+                        <br>
+                        <h3>IAG NZ Ltd.
+                            <a class="hyper" href="www.tui-uk.co.uk" target="_blank">www.tui-uk.co.uk</a>
+                            <p>Senior Business Systems Analyst</p>
+                        </h3>
+                        <br>
 
 
-                        <p>Finally, Han shot first and the original, unadulterated movies remain the best. Stop fiddling
-                            with them, George!</p>
+                </section>
+            </div>
 
 
-                    </div>
+
+            <div id="contacts">
+                <p>Nick Wilson</p>
+                <br>
+                <p>4 Katene Place</p>
+                <p>Snells Beach</p>
+                <p>Auckland 950</p>
+                <p>New Zealand</p>
+                <br>
+                <a href="tel:+64276214595">(m)+64 27 6214595</a>
+                <br>
+                <a href="mailto:the.ardreagh@gmail.com">(e)the.ardreagh@gmail.com</a>
+                <br>
+                <!-- social media links in a row -->
+                <div style="display: flex;flex-direction: row-reverse;">
+                    <a href="https://www.linkedin.com/in/nick-wilson-8aba22a/" target="_blank"
+                        style="width:min-content;margin:1px;">
+                        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                    </a>
+                    <i style="width:min-content;margin:1px; cursor: pointer;"
+                        onclick="openContactform(event.clientX,event.clientY,document.querySelector('#thedisplaybox'))"
+                        class="fa fa-commenting-o" aria-hidden="true"></i>
 
                 </div>
-
             </div>
 
         </div>
+        <!-- CV content. Inserted by LoadHTML script-->
+        <div id="topPage"></div> <!-- Scroll Top CV Content -->
+        <div class="home" id="cvhome">
+            <p>LoadHTML script inserts the selected CV pages will be displayed here</p>
+        </div>
+        <div id="bottomPage"></div> <!-- Scroll Bottom CV Content -->
+        <!-- Popup Contact form -->
+        <div class="contactform" id="contactform" style='cursor:move;z-index:10'>
 
-        <!-- CV content end-->
-
-
-        <!-- Contact form -->
-        <div class="contactform" id="contactform">
-            <div id="highlight" style="display: flex;flex-direction: row;justify-content:space-between;">
+            <div class="highlight" id="contactformheader"
+                style="display: flex;flex-direction: row;justify-content:space-between;">
                 <p>Message me</p>
-                <i style="width:min-content;margin:1px; cursor: pointer;text-align: right;margin: 0;padding: 0;"I
-                
-                    class="fa fa-window-close-o" id="highlight" aria-hidden="true" onclick="closeContactform()"></i>
+                <i style="width:min-content;margin:1px; cursor: pointer;text-align: right;margin: 0;padding: 0;" I
+                    class="fa fa-window-close-o highlight" aria-hidden="true" onclick="closeContactform()"></i>
             </div>
-            <form action="http://localhost:8000" method="POST" id="submessage">
+            <form action="" method="" id="submessage">
 
-                <label style="white-space:nowrap">Name <input type="text" name="full-name" id="full-name"
+                <label style="white-space:nowrap">Name <input type="text" name="fullname" id="fullname"
                         placeholder="Your full name" required style="width:auto;"></label>
                 <label style="white-space:nowrap;">Email <input type="email" name="email" placeholder="email@domain"
                         required style="width:fit-content;"></label>
@@ -254,31 +175,42 @@
                 <textarea style="width: 100%;resize: none;" rows="5" name="message" form="submessage"
                     placeholder="Feedback"></textarea>
                 <br>
-                <input style="cursor: pointer;" type="submit" value="Submit" onclick="submitContactform();">
+
+                <input id="contactform-sub" style="cursor: pointer;" type="submit" value="Submit">
+                <!-- Many ways to get the submit form event
+                    <button>Anyname</button> Just have a button with any name submits?
+                    or
+                    <input contactForm-substyle="cursor: pointer;" type="submit" value="Submit">  submits form standard
+                    or
+                 or
+                    <input id="contactform-sub" style="cursor: pointer;" type="button" value="Submit" onclick="submitContactForm()"> function -->
             </form>
 
         </div>
 
-        <!-- Contact end-->
         <div>
-            <!-- Click image for help navigation -->
+            <!-- Click image for help navigation. Made visible based on user navigation. Initially used to skip intro -->
             <img class="clickIt" id="clickIt" src="../Missions/images/clickIt.jpg" onclick="endIntroAnimmation();">
         </div>
 
     </div>
     <!-- displaybox end-->
-
-
+    <!-- Copy right at bottom of fixed page -->
+    <div class="copyright">
+        <i class="highlight fa fa-copyright" aria-hidden="true"></i>
+        <p class="highlight copyright"></i>Copyright 2022 Nick Wilson</p>
     </div>
 
 
 
-    <div style="position:fixed;width: 100%;">
-        <br>
-        <p id="highlight" style="text-align:right;padding-right: 2%;">Copyright 2022 Nick Wilson</p>
-    </div>
+    <!-- All the scripts-->
+    <script src="../Missions/cvscripts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
 
 
 </body>
+
+
 
 </html>

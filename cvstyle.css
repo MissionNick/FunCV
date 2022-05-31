@@ -1,14 +1,15 @@
 /*-- Testing Information
 
+TEST MODE ENABLED.....
+
 To avoid the load annimation (until I can add programatically)
 
-- Comment out .bmg-img-1 class
+- Comment out .bmg-img-launch class
 - Comment out  visibility:hidden; of the .thedisplaybox class
 
 --*/
 
 /* Global style defaults */
-
 
 * {
     box-sizing: border-box;
@@ -16,14 +17,12 @@ To avoid the load annimation (until I can add programatically)
     /*font-family: Helvetica;*/
 }
 
-
-
-
 /* Standard element style changes */
 
 li {
-    font-size: small;
+    font-size: large;
     text-align: justify;
+    margin: 3px;
 }
 
 a {
@@ -34,12 +33,20 @@ a {
 
 h1 {
 
-    font-size: medium;
+    font-size: x-large
+}
 
+h2 {
+    font-size: large;
+}
+
+h3 {
+    font-size: medium;
 }
 
 p {
     margin: 0px;
+    font-size: large;
 }
 
 i {
@@ -54,6 +61,7 @@ label {
 /*-- Disable load animation if testing post load site - 
 Using this comment until I can do it programatically using .preload? */
 
+/*
 .bg-img-launch {
     background-image: url();
     background-repeat: no-repeat;
@@ -65,26 +73,51 @@ Using this comment until I can do it programatically using .preload? */
     animation-delay: 0s;
     animation-fill-mode: none;
 }
+*/
+
+.disabled-link {
+    pointer-events: none;
+}
+
+.hyper {
+    color: #396ee1;
+    text-decoration: underline;
+
+}
+
+.coming-soon {
+    cursor: none;
+
+
+}
+
+.coming-soon:hover {
+    cursor: url('../Missions/images/poof.svg');
+}
 
 .clickIt {
-    visibility: visible;
+    visibility: hidden;
     position: fixed;
     right: 0%;
     top: 0%
 }
-
 
 .thedisplaybox {
     display: flex;
     flex-direction: row;
     justify-content: center;
     /* Fix to most popular desktop screen */
-    height: 680px;
-    width: auto;
+    position: relative;
+    width: 1366px;
+    height: 768px;
     margin: auto;
-    /*-- Removed for testing */
-    visibility: hidden;
     overflow: hidden;
+    padding-right: 5px;
+    padding-left: 5px;
+
+    /*-- Removed for testing 
+    visibility: hidden; */
+
 
     /* Not working? 
     animation-name: startmeup;
@@ -95,14 +128,25 @@ Using this comment until I can do it programatically using .preload? */
     */
 }
 
+.copyright {
+
+    display: flex;
+    flex-direction: row;
+
+    /* Fix to most popular desktop screen 
+    padding-right: 2%; */
+    margin: auto;
+    width: 1366px;
+    position: sticky;
+    margin: auto;
+    overflow: hidden;
+}
 
 /* Full screen sidebar container */
 .sidebar {
     display: flex;
     flex-direction: column;
-    justify-content: left;
     justify-content: space-between;
-    flex-direction: column;
     width: 25%;
     height: auto;
     text-align: right;
@@ -113,23 +157,71 @@ Using this comment until I can do it programatically using .preload? */
     overflow: hidden;
 }
 
+.careerHistory {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+    text-align: right;
+    overflow: hidden;
+    margin: 5px;
+
+}
 
 /* Content Page container */
 .home {
     display: flex;
     flex-direction: column;
     width: 80%;
-    height: 680px;
     padding-right: 1%;
     padding-left: 1%;
     overflow: hidden;
-    transform-origin: 50% 100%;
+    /*transform-origin: 50% 100%;
     transform: perspective(300px) rotateX(25deg);
-    animation: scroll 100s linear 4s infinite;
+    animation: scroll 100s linear 4s infinite; */
 
 }
 
 
+.dropdown {
+    float: left;
+    overflow: hidden;
+
+}
+
+.dropdown .dropbtn {
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    visibility: hidden;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
 
 
 /* contactform form */
@@ -137,19 +229,42 @@ Using this comment until I can do it programatically using .preload? */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    position: fixed;
-    right: 1px;
+    position: absolute;
+    z-index: 9;
     width: max-content;
     height: min-content;
     border-color: transparent;
     background-color: aliceblue;
     border-style: solid;
     visibility: hidden;
-
 }
 
+.boxList {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 45%;
+    height: auto;
+    text-align: left;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    margin: 3px;
+}
 
+.boxLine {
+    border-top-style: solid;
+    justify-content: flex-start;
+}
 
+.highlight {
+    background-color: #3869d1;
+    color: rgb(181, 213, 250);
+    margin: 0px;
+    border: #3869d1;
+    padding: 6px;
+    font-size: medium;
+}
 
 /* Button style */
 .button {
@@ -163,7 +278,6 @@ Using this comment until I can do it programatically using .preload? */
     background-color: #396ee1;
     color: white;
 }
-
 
 .chatbutton {
     background-color: #d8e4ef;
@@ -181,25 +295,39 @@ Using this comment until I can do it programatically using .preload? */
 
 /* Id selects - Inline and common styles  */
 
-
-#highlight {
-    background-color: #3869d1;
-    color: rgb(181, 213, 250);
-    margin: 0px;
-    border: #3869d1;
-    padding: 6px;
-    font-size: medium;
-}
-
 #contacts {
     font-size: small;
     color: black;
     padding: 5px;
 }
 
+#topmenu {
+    display: none;
+}
+
+#sidemenu {
+    display: inline;
+}
+
+/* Fixed sizes. Height and Border to support Starwars presentation
+
+Full screen
+1366 x 768(Default)
+
+Mobile
+
+360 x 640
+
+or 
+
+Window scrolls enabled with no anuimation
 
 
-@media only screen and (max-width: 768px) {
+
+*/
+
+@media only screen and (max-width: 1365px),
+(max-height:767px) {
 
     .thedisplaybox {
         flex-direction: column;
@@ -208,7 +336,7 @@ Using this comment until I can do it programatically using .preload? */
 
     }
 
-   
+
     .sidebar {
         flex-direction: row;
         justify-content: right;
@@ -219,6 +347,28 @@ Using this comment until I can do it programatically using .preload? */
         background-color: aliceblue;
         top: 1%;
         right: 1%;
+
+    }
+
+    #sidemenu {
+        display: none;
+    }
+
+    #topmenu {
+        display: block;
+    }
+
+    .copyright {
+
+        /* Fix to most popular desktop screen */
+        width: 100%;
+
+    }
+
+    .careerHistory {
+        visibility: hidden;
+        height: 0;
+        width: 0;
 
     }
 
