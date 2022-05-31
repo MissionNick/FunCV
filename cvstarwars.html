@@ -1,0 +1,63 @@
+<!-- ALL CREDIT FOR THE SCROLLING TEXT GOES TO 
+         Craig Buckler
+         http://www.sitepoint.com/css3-starwars-scrolling-text/ 
+    
+    Blame me for the music via embedded video bit
+    -->
+<link rel='stylesheet' href="starwars.css">
+<style>
+
+       .thedisplaybox {
+        flex-direction: column;
+        width: auto;
+        overflow: hidden;
+    }
+
+
+    .sidebar {
+        flex-direction: row;
+        justify-content: right;
+        position: fixed;
+        width: min-content;
+        height: min-content;
+        border-color: transparent;
+        background-color: aliceblue;
+        top: 1%;
+        right: 1%;
+
+    }
+
+    #sidemenu {
+        display: none;
+    }
+
+    #topmenu {
+        display: block;
+    }
+
+    .copyright {
+
+        /* Fix to most popular desktop screen */
+        width: 100%;
+
+    }
+
+    .careerHistory {
+        visibility: hidden;
+        height: 0;
+        width: 0;
+
+    }
+</style>
+
+<p id="start">A short time ago in a browser very, very close&hellip;</p>
+
+<h1>NICK WILSON<sub>cirriculum vitae</sub></h1>
+
+<div id="titles">
+    <div id="titlecontent">
+
+        <div class="increaseAndCenter" id="starwarsCV"></div>
+
+    </div>
+</div>
