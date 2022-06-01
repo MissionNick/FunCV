@@ -1,0 +1,46 @@
+Mission
+
+
+Goal - Create an interactive and fun web pag of a CV 
+(Extended functionality of reimplementing MS Publisher CV)
+
+Features
+* Support for mobile and large screen (17 inch)
+* Contact CV owner form
+* Load CV using a standard template
+* Fun - Retro game that uses the CV content. Idea: Space Invaders.
+* Fun - Roll credits. Show the CV using a movie credit theme. Idea: Star Wars
+
+Design
+- Fixed layouts Full screen, Mobile, Game.
+- Game:  Score based on words.  Bonus for section headings and buzz words.
+
+Style
+- Listners
+- Flex containers
+- Simple navigation
+
+
+Mission 2 Release update
+
+- Rollcredits prototype
+- Message Form Dragable with HTML5 validation - Dummy submit.
+- Menu
+- Mousewheel scroll for CV and Career History windows.
+- New featurecComing soon prototype / placeholder.
+
+
+GIT Repository- https://github.com/MissionNick/MissionReady.git
+
+Next
+- React and Game prototype
+- Complete Messaging Feature
+- Edit Prototype
+- Refine UI, structure to support edit.
+
+
+
+
+
+
+
