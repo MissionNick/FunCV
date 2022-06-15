@@ -1,7 +1,9 @@
-Mission
+#Mission
 
 
-Goal - Create an interactive and fun web pag of a CV 
+##Goal
+
+Create an interactive and fun web pag of a CV 
 (Extended functionality of reimplementing MS Publisher CV)
 
 Features

@@ -50,7 +50,7 @@ async function getCVinfo(cvInfo) {
 async function editCV() {
     let cv = await getCVinfo();
     console.log(cv);
-};
+}
 
 function sillyLoop() {
 
@@ -78,8 +78,8 @@ function rollCredits() {
 
     //set best style for credits
 
-    loadHTML('cvstarwars.html', 'cvhome');
-    loadHTML('cvpages.html', 'starwarsCV');
+    loadHTML('./cvstarwars.html', 'cvhome');
+    loadHTML('./cvpages.html', 'starwarsCV');
     let audio = new Audio('Star_Wars_Main_Theme_Song.mp3');
     audio.play();
 }
@@ -144,6 +144,7 @@ const messageArray = [
     { contactname: '', email: '', message: '' }
 
 ];
+
 function submitContactForm(form) {
 
 
@@ -207,8 +208,8 @@ function openContactform(x_pos, y_pos, relPos) {
     console.log("Parent ", maxwidth, maxheight);
     console.log("Form ", fwidth, fheight);
 
-    if ((x_pos + fwidth) > maxwidth) { x_pos = maxwidth - fwidth }; //adjust to fit
-    if ((y_pos + fheight) > maxheight) { y_pos = maxheight - fwidth };//adjust to fit
+    if ((x_pos + fwidth) > maxwidth) { x_pos = maxwidth - fwidth } //adjust to fit
+    if ((y_pos + fheight) > maxheight) { y_pos = maxheight - fwidth }//adjust to fit
 
     console.log("Form pos ", x_pos, y_pos);
 

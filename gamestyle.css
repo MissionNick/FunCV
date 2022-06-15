@@ -1,0 +1,9 @@
+/* Position of the player spaceship */
+.base {
+
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    overflow: hidden;
+
+}

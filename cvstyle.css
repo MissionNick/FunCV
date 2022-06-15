@@ -92,7 +92,7 @@ Using this comment until I can do it programatically using .preload? */
 }
 
 .coming-soon:hover {
-    cursor: url('../Missions/images/poof.svg');
+    cursor: url('../CVHome/temp/poof.svg');
 }
 
 .clickIt {
@@ -381,17 +381,17 @@ Window scrolls enabled with no anuimation
 
 
     100% {
-        background-image: url(../Missions/images/mspubcv_page2.jpg);
+        background-image: url(../CVHome/images/mspubcv_page2.jpg);
 
     }
 
     60% {
-        background-image: url(../Missions/images/mspubcv_page1.jpg);
+        background-image: url(../CVHome/images/mspubcv_page1.jpg);
 
     }
 
     0% {
-        background-image: url(../Missions/images/ThePlan-Mission-1.jpg);
+        background-image: url(../CVHome/images/ThePlan-Mission-1.jpg);
     }
 
 
